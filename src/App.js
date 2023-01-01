@@ -1,14 +1,15 @@
 import { Navbar } from "./components/Navbar";
 import { Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
+import { AuthContextProvider } from "./Context/AuthContext";
 function App() {
   return (
-    <div className="">
+    <AuthContextProvider>
       <Navbar />
       <Routes>
         <Route path="" element={<Home />}></Route>
       </Routes>
-    </div>
+    </AuthContextProvider>
   );
 }
 
